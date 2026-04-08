@@ -102,8 +102,42 @@ All three are also available as Docker images: `nickcrew/apparatus`, `nickcrew/c
 
 ---
 
+## Facet
+
+<p align="center">
+  <img src="img/facet-github-banner.png" alt="Facet — Same diamond. Different face." width="100%">
+</p>
+
+AI-powered career platform. Build a deep model of who you are professionally, then let it find the right jobs, assemble targeted materials, and prep for interviews. The system gets smarter with every interaction.
+
+**The Loop** — Research → Pipeline → Build → Letters → Prep. Five workspaces that feed each other: AI-inferred job search, opportunity tracking, targeted resume generation, cover letters from pipeline context, and interview prep decks. Results feed back into Research to improve targeting.
+
+Separate from the security suite, same engineering principles. Hosted or self-hosted.
+
+### Try It
+
+```bash
+# Hosted (free tier available)
+open https://demo.myfacets.cv
+
+# Self-host
+git clone https://github.com/atlas-crew/Facet
+cd Facet && docker compose up
+```
+
+### Links
+
+| | |
+|---|---|
+| Repository | [atlas-crew/Facet](https://github.com/atlas-crew/Facet) |
+| Live Demo | [demo.myfacets.cv](https://demo.myfacets.cv) |
+| Website | [atlascrew.dev/facet](https://atlascrew.dev/facet) |
+| License | AGPL-3.0 |
+
+---
+
 ## About Atlas Crew
 
-Atlas Crew is the consulting practice of [Nick Ferguson](https://linkedin.com/in/ncferguson). Available for SDLC modernization, platform engineering, AI integration, and developer experience work — the open source above is the proof of work.
+Atlas Crew is the name the work above is published under. Available for SDLC modernization, platform engineering, AI integration, and developer experience work.
 
 [**atlascrew.dev/consulting**](https://atlascrew.dev/consulting) · [nick@atlascrew.dev](mailto:nick@atlascrew.dev) · [LinkedIn](https://linkedin.com/in/ncferguson)
