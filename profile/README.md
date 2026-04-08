@@ -2,9 +2,18 @@
   <img src="banner.png" alt="Atlas Crew" width="100%">
 </p>
 
-Product engineering and open-source security tools.
+<p align="center">
+  <strong>Consulting services & open-source software.</strong><br>
+  Edge protection, security testing, and career intelligence platforms.
+</p>
+
+---
 
 ## Horizon Security Platform
+
+<p align="center">
+  <img src="img/edge-protection-banner.png" alt="Horizon Security Platform" width="100%">
+</p>
 
 Embedded intelligence for API security and application defense. All detection and blocking decisions happen locally at the edge — zero external dependencies.
 
@@ -40,18 +49,24 @@ docker run -p 3100:3100 \
 |---|---|
 | Repository | [atlas-crew/horizon-security-platform](https://github.com/atlas-crew/horizon-security-platform) |
 | Documentation | [horizon.atlascrew.dev](https://horizon.atlascrew.dev) |
-| Website | [atlascrew.dev](https://atlascrew.dev) |
+| Website | [atlascrew.dev/horizon](https://atlascrew.dev/horizon) |
 | License | AGPL-3.0 |
+
+---
 
 ## Inferno Lab
 
-Open-source security testing suite — attack simulation, vulnerability research, and compliance assessment.
+<p align="center">
+  <img src="img/infernolab-social.png" alt="Inferno Lab — Three Tools. One Platform." width="100%">
+</p>
 
-**[Apparatus](https://github.com/inferno-lab/Apparatus)** — Cybersecurity simulation lab with 58+ features spanning deception, chaos engineering, red team automation, and multi-protocol support.
+Open-source security testing suite — attack simulation, vulnerability research, and compliance assessment. Three tools, one platform.
 
-**[Crucible](https://github.com/inferno-lab/Crucible)** — Attack simulation and compliance assessment engine with 80+ scenarios, visual editor, real-time execution, and pass/fail scoring.
+**[Apparatus](https://github.com/atlas-crew/Apparatus)** — Cybersecurity simulation lab built around a 13-protocol echo server. Multi-protocol traffic generation, deception, chaos engineering, and AI red team automation. Build, attack, and observe realistic environments.
 
-**[Chimera](https://github.com/inferno-lab/Chimera)** — Intentionally vulnerable application with 456+ endpoints across 25+ industry verticals for WAF testing and security education.
+**[Chimera](https://github.com/atlas-crew/Chimera)** — Intentionally vulnerable application with 450+ endpoints across 25+ industry verticals. 12 web apps representing real-world attack surfaces, plus an X-Ray inspector, guided exploit tours, WAF visualization, and LLM kill chain tracking.
+
+**[Crucible](https://github.com/atlas-crew/Crucible)** — Attack simulation and compliance assessment engine with 120+ scenarios mapped to MITRE ATT&CK. Composable scenario chains, adaptive AI testing, and automated reporting against NIST 800-53, CIS Controls, PCI DSS, and HIPAA.
 
 ### Quick Install
 
@@ -81,6 +96,14 @@ All three are also available as Docker images: `nickcrew/apparatus`, `nickcrew/c
 
 | Product | Repository | Documentation |
 | --- | --- | --- |
-| **Apparatus** | [inferno-lab/Apparatus](https://github.com/inferno-lab/Apparatus) | [apparatus.atlascrew.dev](https://apparatus.atlascrew.dev) |
-| **Crucible** | [inferno-lab/Crucible](https://github.com/inferno-lab/Crucible) | [crucible.atlascrew.dev](https://crucible.atlascrew.dev) |
-| **Chimera** | [inferno-lab/Chimera](https://github.com/inferno-lab/Chimera) | [chimera.atlascrew.dev](https://chimera.atlascrew.dev) |
+| **Apparatus** | [atlas-crew/Apparatus](https://github.com/atlas-crew/Apparatus) | [apparatus.atlascrew.dev](https://apparatus.atlascrew.dev) |
+| **Chimera** | [atlas-crew/Chimera](https://github.com/atlas-crew/Chimera) | [chimera.atlascrew.dev](https://chimera.atlascrew.dev) |
+| **Crucible** | [atlas-crew/Crucible](https://github.com/atlas-crew/Crucible) | [crucible.atlascrew.dev](https://crucible.atlascrew.dev) |
+
+---
+
+## About Atlas Crew
+
+Atlas Crew is the consulting practice of [Nick Ferguson](https://linkedin.com/in/ncferguson). Available for SDLC modernization, platform engineering, AI integration, and developer experience work — the open source above is the proof of work.
+
+[**atlascrew.dev/consulting**](https://atlascrew.dev/consulting) · [nick@atlascrew.dev](mailto:nick@atlascrew.dev) · [LinkedIn](https://linkedin.com/in/ncferguson)
