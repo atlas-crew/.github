@@ -3,23 +3,50 @@
 </p>
 
 <p align="center">
-  <strong>Consulting services & open-source software.</strong><br>
-  Edge protection, security testing, and career intelligence platforms.
+  <strong>Consulting services & open-source security platforms.</strong><br>
+  Edge defense, adversary emulation, vulnerable targets, and platform infrastructure.
 </p>
 
 ---
 
-## Synapse Edge Defense
+## Atlas Crew Security
 
 <p align="center">
-  <img src="img/synapse-social.png" alt="Synapse Edge Defense" width="100%">
+  <img src="img/atlas-crew-security-social.png" alt="Atlas Crew Security" width="100%">
 </p>
 
-Embedded intelligence for API security and application defense. All detection and blocking decisions happen locally at the edge — zero external dependencies.
+A platform of five open-source products that close the loop on application security: detect at the edge, emulate adversaries, harden against real attack surfaces.
 
-**[Synapse WAF](https://github.com/atlas-crew/synapse)** — High-performance edge detection sensor built on Rust/Pingora. 237 WAF rules, 25 DLP patterns, campaign correlation, bot detection, behavioral analysis. Single binary, sub-10 microsecond detection latency at 72K req/s.
+**Flagship trio** — security tools you'd recommend to peers:
 
-**[Synapse Fleet](https://github.com/atlas-crew/synapse)** — Multi-tenant fleet intelligence hub and SOC platform. Live threat map, campaign visualization, impossible travel detection, war room, and sensor management. Self-hosted or SaaS.
+- **Synapse** — Edge defense (WAF + Fleet)
+- **Chimera** — Vulnerable API targets (480+ endpoints, 25 verticals)
+- **Crucible** — Adversary emulation (120+ scenarios, MITRE-mapped)
+
+**Substrate tier** — platform infrastructure that the trio runs on:
+
+- **Bridge** — Service orchestrator
+- **Apparatus** — Cybersecurity simulation lab
+
+End-to-end exercise: Apparatus stands up the lab, Bridge orchestrates services, Crucible launches attack scenarios at Chimera's vulnerable surfaces, and Synapse Fleet observes the traffic in real time.
+
+<p align="center">
+  <img src="img/atlas-crew-security-architecture.svg" alt="Atlas Crew Security platform architecture: Synapse observes the trio at the top, Crucible exploits Chimera in the middle, Bridge and Apparatus form the substrate at the bottom" width="100%">
+</p>
+
+---
+
+## Synapse
+
+<p align="center">
+  <img src="img/synapse-banner.png" alt="Synapse — Detect. Decide. Fire." width="100%">
+</p>
+
+Embedded edge defense — all detection and blocking decisions happen locally with zero external dependencies. Two products that pair: a high-performance detection sensor and a multi-tenant observability platform.
+
+**[Synapse WAF](https://github.com/atlas-crew/synapse)** — Edge detection sensor built on Rust/Pingora. 237 WAF rules, 25 DLP patterns, campaign correlation, bot detection, behavioral analysis. Single binary, sub-10 microsecond detection latency at 72K req/s.
+
+**[Synapse Fleet](https://github.com/atlas-crew/synapse)** — Multi-tenant fleet intelligence hub and SOC platform. Live threat map, campaign visualization, impossible-travel detection, war room, sensor management. Self-hosted or SaaS.
 
 ### Quick Install
 
@@ -38,7 +65,7 @@ docker run -p 3100:3100 \
 | Component              | Install                              | Registry                                                       |
 | ---------------------- | ------------------------------------ | -------------------------------------------------------------- |
 | **Synapse WAF**        | `docker pull nickcrew/synapse-waf`   | [Docker Hub](https://hub.docker.com/r/nickcrew/synapse-waf)    |
-| **SynapserFleet**      | `docker pull nickcrew/synapse-fleet` | [Docker Hub](https://hub.docker.com/r/nickcrew/horizon)        |
+| **Synapse Fleet**      | `docker pull nickcrew/synapse-fleet` | [Docker Hub](https://hub.docker.com/r/nickcrew/synapse-fleet)  |
 | **Synapse Fleet**      | `npm i -g @atlascrew/synapse-fleet`  | [npm](https://www.npmjs.com/package/@atlascrew/synapse-fleet)  |
 | **Synapse CLI**        | `npm i -g @atlascrew/synapse-client` | [npm](https://www.npmjs.com/package/@atlascrew/synapse-client) |
 | **Synapse API Client** | `npm i @atlascrew/synapse-api`       | [npm](https://www.npmjs.com/package/@atlascrew/synapse-api)    |
@@ -48,35 +75,122 @@ docker run -p 3100:3100 \
 |               |                                                             |
 | ------------- | ----------------------------------------------------------- |
 | Repository    | [atlas-crew/synapse](https://github.com/atlas-crew/synapse) |
-| Documentation | [synapse.atlascrew.dev](https://horizon.atlascrew.dev)      |
+| Documentation | [synapse.atlascrew.dev](https://synapse.atlascrew.dev)      |
 | Website       | [atlascrew.dev/synapse](https://atlascrew.dev/synapse)      |
 | License       | AGPL-3.0                                                    |
 
 ---
 
-## Inferno Lab
+## Chimera
 
 <p align="center">
-  <img src="infernolab-hero.png" alt="Inferno Lab — Two Tools. One Platform." width="100%">
+  <img src="img/chimera-banner.png" alt="Chimera — Vulnerable Targets" width="100%">
 </p>
 
-Open-source security testing suite — attack simulation, vulnerability research, and compliance assessment. Three tools, one platform.
-
-**[Chimera](https://github.com/atlas-crew/Chimera)** — Chimera is a vulnerable API platform at roughly 10x the scale of any comparable open-source lab. 480+ endpoints across 25 industry verticals, 12 of them wrapped in branded production-style web apps (healthcare, banking, e-commerce, SaaS, government, telecom, and six others). Business-logic flaws the generic OWASP labs don't touch. Guided exploit tours walk learners through the full kill chain. The X-Ray Inspector ties every vulnerability to the exact line of source and the fix. Not toy CTF puzzles. Real attack surfaces authored with remediation built in.
-
-**[Crucible](https://github.com/atlas-crew/Crucible)** — Crucible is the adversary emulation engine. 120+ attack scenarios authored against Chimera's specific vulnerabilities, with a DAG execution engine, live WebSocket simulation, and pass/fail assessment against ground-truth assertions. Every scenario knows what should work, what shouldn't, and where in the target it's exploiting. Point it at Apparatus plus Chimera for the full integrated run, or bring your own targets.
+A vulnerable API platform at roughly 10× the scale of any comparable open-source lab. 480+ endpoints across 25 industry verticals, 12 of them wrapped in branded production-style web apps (healthcare, banking, e-commerce, SaaS, government, telecom, and six others). Business-logic flaws the generic OWASP labs don't touch. Guided exploit tours walk learners through the full kill chain. The X-Ray Inspector ties every vulnerability to the exact line of source and the fix. Not toy CTF puzzles — real attack surfaces authored with remediation built in.
 
 ### Quick Install
 
 ```bash
-# Apparatus
-npm install -g @atlascrew/apparatus && apparatus
-
-# Crucible
-npm install -g @atlascrew/crucible && crucible start
-
-# Chimera
 pip install chimera-api && chimera-api --port 8880 --demo-mode full
+```
+
+### Packages
+
+| Component   | Install                   | Registry                                       |
+| ----------- | ------------------------- | ---------------------------------------------- |
+| **Chimera** | `pip install chimera-api` | [PyPI](https://pypi.org/project/chimera-api/)  |
+
+Also available as `nickcrew/chimera` on Docker Hub.
+
+### Links
+
+|               |                                                             |
+| ------------- | ----------------------------------------------------------- |
+| Repository    | [atlas-crew/Chimera](https://github.com/atlas-crew/Chimera) |
+| Documentation | [chimera.atlascrew.dev](https://chimera.atlascrew.dev)      |
+| Website       | [atlascrew.dev/chimera](https://atlascrew.dev/chimera)      |
+| License       | MIT                                                         |
+
+---
+
+## Crucible
+
+<p align="center">
+  <img src="img/crucible-banner.png" alt="Crucible — Adversary Emulation" width="100%">
+</p>
+
+The adversary emulation engine. 120+ attack scenarios authored against Chimera's specific vulnerabilities, with a DAG execution engine, live WebSocket simulation, and pass/fail assessment against ground-truth assertions. Every scenario knows what should work, what shouldn't, and where in the target it's exploiting. Point it at Apparatus + Chimera for the full integrated run, or bring your own targets.
+
+### Quick Install
+
+```bash
+npm install -g @atlascrew/crucible && crucible start
+```
+
+### Packages
+
+| Component           | Install                               | Registry                                                        |
+| ------------------- | ------------------------------------- | --------------------------------------------------------------- |
+| **Crucible**        | `npm i -g @atlascrew/crucible`        | [npm](https://www.npmjs.com/package/@atlascrew/crucible)        |
+| **Crucible CLI**    | `npm i -g @atlascrew/crucible-cli`    | [npm](https://www.npmjs.com/package/@atlascrew/crucible-cli)    |
+| **Crucible Client** | `npm i -g @atlascrew/crucible-client` | [npm](https://www.npmjs.com/package/@atlascrew/crucible-client) |
+
+Also available as `nickcrew/crucible` on Docker Hub.
+
+### Links
+
+|               |                                                               |
+| ------------- | ------------------------------------------------------------- |
+| Repository    | [atlas-crew/Crucible](https://github.com/atlas-crew/Crucible) |
+| Documentation | [crucible.atlascrew.dev](https://crucible.atlascrew.dev)      |
+| Website       | [atlascrew.dev/crucible](https://atlascrew.dev/crucible)      |
+| License       | MIT                                                           |
+
+---
+
+## Bridge
+
+<p align="center">
+  <img src="img/bridge-banner.png" alt="Bridge — Service Orchestrator" width="100%">
+</p>
+
+Single-binary service orchestrator for security labs. Brings up Apparatus, Crucible, Chimera, and any custom services in a coordinated graph; manages dependencies, health checks, and teardown. Substrate-tier — quieter branding than the flagship trio because Bridge is the platform you build security work on, not the security work itself.
+
+### Quick Install
+
+```bash
+npm install -g @atlascrew/bridge && bridge up
+```
+
+### Packages
+
+| Component  | Install                      | Registry                                               |
+| ---------- | ---------------------------- | ------------------------------------------------------ |
+| **Bridge** | `npm i -g @atlascrew/bridge` | [npm](https://www.npmjs.com/package/@atlascrew/bridge) |
+
+### Links
+
+|            |                                                           |
+| ---------- | --------------------------------------------------------- |
+| Repository | [atlas-crew/bridge](https://github.com/atlas-crew/bridge) |
+| Website    | [atlascrew.dev/bridge](https://atlascrew.dev/bridge)      |
+| License    | MIT                                                       |
+
+---
+
+## Apparatus
+
+<p align="center">
+  <img src="img/apparatus-banner.png" alt="Apparatus — Cybersecurity Simulation Lab" width="100%">
+</p>
+
+The cybersecurity simulation lab — the runtime that ties Crucible (attack scenarios) and Chimera (vulnerable targets) together. Provides scenario builder, traffic generation, JWT/MTD modules, supply-chain attack simulation, timeline visualization, and red-team validation. Substrate-tier alongside Bridge.
+
+### Quick Install
+
+```bash
+npm install -g @atlascrew/apparatus && apparatus
 ```
 
 ### Packages
@@ -85,18 +199,17 @@ pip install chimera-api && chimera-api --port 8880 --demo-mode full
 | ----------------- | ----------------------------------- | ------------------------------------------------------------- |
 | **Apparatus**     | `npm i -g @atlascrew/apparatus`     | [npm](https://www.npmjs.com/package/@atlascrew/apparatus)     |
 | **Apparatus CLI** | `npm i -g @atlascrew/apparatus-cli` | [npm](https://www.npmjs.com/package/@atlascrew/apparatus-cli) |
-| **Crucible**      | `npm i -g @atlascrew/crucible`      | [npm](https://www.npmjs.com/package/@atlascrew/crucible)      |
-| **Chimera**       | `pip install chimera-api`           | [PyPI](https://pypi.org/project/chimera-api/)                 |
 
-All three are also available as Docker images: `nickcrew/apparatus`, `nickcrew/crucible`, `nickcrew/chimera`.
+Also available as `nickcrew/apparatus` on Docker Hub.
 
 ### Links
 
-| Product       | Repository                                                      | Documentation                                              |
-| ------------- | --------------------------------------------------------------- | ---------------------------------------------------------- |
-| **Apparatus** | [atlas-crew/Apparatus](https://github.com/atlas-crew/Apparatus) | [apparatus.atlascrew.dev](https://apparatus.atlascrew.dev) |
-| **Chimera**   | [atlas-crew/Chimera](https://github.com/atlas-crew/Chimera)     | [chimera.atlascrew.dev](https://chimera.atlascrew.dev)     |
-| **Crucible**  | [atlas-crew/Crucible](https://github.com/atlas-crew/Crucible)   | [crucible.atlascrew.dev](https://crucible.atlascrew.dev)   |
+|               |                                                                 |
+| ------------- | --------------------------------------------------------------- |
+| Repository    | [atlas-crew/Apparatus](https://github.com/atlas-crew/Apparatus) |
+| Documentation | [apparatus.atlascrew.dev](https://apparatus.atlascrew.dev)      |
+| Website       | [atlascrew.dev/apparatus](https://atlascrew.dev/apparatus)      |
+| License       | MIT                                                             |
 
 ---
 
@@ -110,7 +223,7 @@ AI-powered career platform. Build a deep model of who you are professionally, th
 
 **The Loop** — Research → Pipeline → Build → Letters → Prep. Five workspaces that feed each other: AI-inferred job search, opportunity tracking, targeted resume generation, cover letters from pipeline context, and interview prep decks. Results feed back into Research to improve targeting.
 
-Separate from the security suite, same engineering principles. Hosted or self-hosted.
+Separate from the security platform, same engineering principles. Hosted or self-hosted.
 
 ### Try It
 
