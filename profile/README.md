@@ -26,9 +26,9 @@ A platform of five open-source products that close the loop on application secur
 **Substrate tier** — quieter visual treatment for non-flagship products:
 
 - **Bridge** — Service orchestrator (stands up and manages the lab)
-- **Apparatus** — Sandbox / experimentation space (where new scenarios prototype before graduating to Crucible)
+- **Apparatus** — Innovation pipeline for the entire platform (sandbox where ideas prototype before becoming features in existing products, or entirely new ones)
 
-End-to-end exercise: Bridge stands up and orchestrates the services, Crucible runs production-grade attack scenarios against Chimera's vulnerable surfaces, and Synapse Fleet observes the traffic in real time. Apparatus sits alongside as the sandbox where new scenarios, traffic patterns, and assessment techniques prototype before they're production-ready.
+End-to-end exercise: Bridge stands up and orchestrates the services, Crucible runs production-grade attack scenarios against Chimera's vulnerable surfaces, and Synapse Fleet observes the traffic in real time. Apparatus sits alongside as the platform-wide R&D space — a sandbox where new scenarios, traffic patterns, detection techniques, and tooling prototype before being absorbed into production products or shipped as new ones.
 
 <p align="center">
   <img src="img/atlas-crew-security-architecture.svg" alt="Atlas Crew Security platform architecture: Synapse observes the trio at the top, Crucible exploits Chimera in the middle, Bridge and Apparatus form the substrate at the bottom" width="100%">
@@ -185,7 +185,7 @@ npm install -g @atlascrew/bridge && bridge up
   <img src="img/apparatus-banner.png" alt="Apparatus — Cybersecurity Simulation Lab" width="100%">
 </p>
 
-The sandbox / experimentation area of the platform. Where new scenarios, traffic generation patterns, and assessment techniques prototype before graduating to Crucible. Provides scenario builder, traffic generation, JWT/MTD modules, supply-chain attack simulation, timeline visualization, and red-team validation — the same primitives Crucible has, in experimental form. Not production-grade like Crucible; it's the lab where ideas live before they're ready to ship. Substrate-tier visually, sibling to Bridge.
+The platform-wide innovation pipeline. Where new ideas prototype before they're absorbed as features in existing products (Synapse, Crucible, Chimera, Bridge) or shipped as entirely new products. Provides scenario builder, traffic generation, JWT/MTD modules, supply-chain attack simulation, timeline visualization, and red-team validation — experimental tooling that overlaps with what Crucible does, but in research form. Not production-grade like Crucible; it's the lab where everything in the platform first takes shape. Substrate-tier visually, sibling to Bridge.
 
 ### Quick Install
 
