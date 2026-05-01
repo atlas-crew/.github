@@ -2,6 +2,11 @@
   <title>Atlas Crew Security — Platform Architecture</title>
   <desc>Layered diagram: Synapse observes traffic at the top; Crucible exploits Chimera in the production zone; Apparatus sits alongside as the sandbox where new scenarios prototype; Bridge orchestrates services as the substrate.</desc>
 
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,CRSV,MONO@-15..0,300..1000,0..1,0..1,0..1&amp;display=swap');
+    text { font-family: 'Recursive', system-ui, -apple-system, sans-serif; }
+  </style>
+
   <!-- Background -->
   <rect width="1200" height="600" fill="#080d18"/>
 
@@ -30,95 +35,95 @@
   </g>
 
   <!-- Title -->
-  <text x="600" y="58" text-anchor="middle" fill="#eef0f4" font-family="system-ui, sans-serif" font-size="24" font-weight="600" letter-spacing="3">ATLAS CREW SECURITY</text>
-  <text x="600" y="80" text-anchor="middle" fill="#c4a882" font-family="system-ui, sans-serif" font-size="13" font-style="italic" letter-spacing="0.5">platform architecture</text>
+  <text x="600" y="58" text-anchor="middle" fill="#eef0f4" font-family="Recursive, system-ui, sans-serif" font-size="24" font-weight="600" letter-spacing="3">ATLAS CREW SECURITY</text>
+  <text x="600" y="80" text-anchor="middle" fill="#c4a882" font-family="Recursive, system-ui, sans-serif" font-size="13" font-style="italic" letter-spacing="0.5">platform architecture</text>
 
   <!-- ═══ TOP TIER: SYNAPSE (observability) ═══════════════ -->
   <g>
     <rect x="80" y="108" width="1040" height="80" fill="#15223c" stroke="#8b5cf6" stroke-width="1.5" rx="4"/>
-    <text x="100" y="132" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="10" letter-spacing="2" font-weight="500">OBSERVABILITY</text>
-    <text x="100" y="166" fill="#8b5cf6" font-family="system-ui, sans-serif" font-size="28" font-weight="800" letter-spacing="1">SYNAPSE</text>
-    <text x="1100" y="144" text-anchor="end" fill="#eef0f4" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Edge WAF + Fleet</text>
-    <text x="1100" y="164" text-anchor="end" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="11">Detects attacks, correlates campaigns</text>
-    <text x="1100" y="182" text-anchor="end" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="10" font-style="italic">Rust/Pingora · 72K req/s · sub-10μs detection</text>
+    <text x="100" y="132" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="10" letter-spacing="2" font-weight="500">OBSERVABILITY</text>
+    <text x="100" y="166" fill="#8b5cf6" font-family="Recursive, system-ui, sans-serif" font-size="28" font-weight="800" letter-spacing="1">SYNAPSE</text>
+    <text x="1100" y="144" text-anchor="end" fill="#eef0f4" font-family="Recursive, system-ui, sans-serif" font-size="13" font-weight="500">Edge WAF + Fleet</text>
+    <text x="1100" y="164" text-anchor="end" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="11">Detects attacks, correlates campaigns</text>
+    <text x="1100" y="182" text-anchor="end" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="10" font-style="italic">Rust/Pingora · 72K req/s · sub-10μs detection</text>
   </g>
 
   <!-- ═══ MIDDLE: PRODUCTION (Crucible → Chimera) + SANDBOX (Apparatus) ═══ -->
 
   <!-- Production zone label -->
-  <text x="80" y="220" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="10" letter-spacing="2" font-weight="500">── PRODUCTION ──</text>
+  <text x="80" y="220" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="10" letter-spacing="2" font-weight="500">── PRODUCTION ──</text>
 
   <!-- Crucible card -->
   <g>
     <rect x="80" y="232" width="320" height="180" fill="#15223c" stroke="#e5a820" stroke-width="1.5" rx="4"/>
-    <text x="100" y="258" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="10" letter-spacing="2" font-weight="500">ATTACK</text>
-    <text x="100" y="298" fill="#e5a820" font-family="system-ui, sans-serif" font-size="32" font-weight="800" letter-spacing="1">CRUCIBLE</text>
-    <text x="100" y="328" fill="#eef0f4" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Adversary Emulation</text>
-    <text x="100" y="354" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="11">120+ scenarios · DAG execution</text>
-    <text x="100" y="372" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="11">Pass/fail vs. ground-truth</text>
-    <text x="100" y="390" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="11" font-style="italic">MITRE ATT&amp;CK · production-grade</text>
+    <text x="100" y="258" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="10" letter-spacing="2" font-weight="500">ATTACK</text>
+    <text x="100" y="298" fill="#e5a820" font-family="Recursive, system-ui, sans-serif" font-size="32" font-weight="800" letter-spacing="1">CRUCIBLE</text>
+    <text x="100" y="328" fill="#eef0f4" font-family="Recursive, system-ui, sans-serif" font-size="13" font-weight="500">Adversary Emulation</text>
+    <text x="100" y="354" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="11">120+ scenarios · DAG execution</text>
+    <text x="100" y="372" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="11">Pass/fail vs. ground-truth</text>
+    <text x="100" y="390" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="11" font-style="italic">MITRE ATT&amp;CK · production-grade</text>
   </g>
 
   <!-- EXPLOITS arrow Crucible → Chimera -->
   <g>
     <line x1="405" y1="322" x2="475" y2="322" stroke="#e5a820" stroke-width="2" marker-end="url(#arrowhead-amber)"/>
-    <text x="440" y="312" text-anchor="middle" fill="#e5a820" font-family="system-ui, sans-serif" font-size="10" font-weight="500" letter-spacing="1">EXPLOITS</text>
+    <text x="440" y="312" text-anchor="middle" fill="#e5a820" font-family="Recursive, system-ui, sans-serif" font-size="10" font-weight="500" letter-spacing="1">EXPLOITS</text>
   </g>
 
   <!-- Chimera card -->
   <g>
     <rect x="480" y="232" width="320" height="180" fill="#15223c" stroke="#c850a3" stroke-width="1.5" rx="4"/>
-    <text x="500" y="258" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="10" letter-spacing="2" font-weight="500">TARGET</text>
-    <text x="500" y="298" fill="#c850a3" font-family="system-ui, sans-serif" font-size="32" font-weight="800" letter-spacing="1">CHIMERA</text>
-    <text x="500" y="328" fill="#eef0f4" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Vulnerable API Targets</text>
-    <text x="500" y="354" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="11">480+ endpoints · 25 verticals</text>
-    <text x="500" y="372" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="11">12 production-style portals</text>
-    <text x="500" y="390" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="11" font-style="italic">Business-logic flaws · X-Ray Inspector</text>
+    <text x="500" y="258" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="10" letter-spacing="2" font-weight="500">TARGET</text>
+    <text x="500" y="298" fill="#c850a3" font-family="Recursive, system-ui, sans-serif" font-size="32" font-weight="800" letter-spacing="1">CHIMERA</text>
+    <text x="500" y="328" fill="#eef0f4" font-family="Recursive, system-ui, sans-serif" font-size="13" font-weight="500">Vulnerable API Targets</text>
+    <text x="500" y="354" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="11">480+ endpoints · 25 verticals</text>
+    <text x="500" y="372" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="11">12 production-style portals</text>
+    <text x="500" y="390" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="11" font-style="italic">Business-logic flaws · X-Ray Inspector</text>
   </g>
 
   <!-- Sandbox zone label -->
-  <text x="840" y="220" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="10" letter-spacing="2" font-weight="500">── SANDBOX ──</text>
+  <text x="840" y="220" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="10" letter-spacing="2" font-weight="500">── SANDBOX ──</text>
 
   <!-- Apparatus card (dashed border to signal experimental) -->
   <g>
     <rect x="840" y="232" width="280" height="180" fill="#0d1424" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="6 4" rx="4"/>
-    <text x="860" y="258" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="10" letter-spacing="2" font-weight="500">EXPERIMENTAL</text>
-    <text x="860" y="296" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="26" font-weight="600">Apparatus</text>
-    <text x="860" y="320" fill="#22c55e" font-family="system-ui, sans-serif" font-size="11" font-weight="500" letter-spacing="0.5">Sandbox / Lab</text>
-    <text x="860" y="346" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="11">Scenario builder, traffic gen,</text>
-    <text x="860" y="362" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="11">JWT/MTD, supply-chain modules</text>
-    <text x="860" y="384" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="10" font-style="italic">Where ideas prototype before</text>
-    <text x="860" y="398" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="10" font-style="italic">graduating to Crucible</text>
+    <text x="860" y="258" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="10" letter-spacing="2" font-weight="500">EXPERIMENTAL</text>
+    <text x="860" y="296" fill="#FFFFFF" font-family="Recursive, system-ui, sans-serif" font-size="26" font-weight="600">Apparatus</text>
+    <text x="860" y="320" fill="#22c55e" font-family="Recursive, system-ui, sans-serif" font-size="11" font-weight="500" letter-spacing="0.5">Sandbox / Lab</text>
+    <text x="860" y="346" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="11">Scenario builder, traffic gen,</text>
+    <text x="860" y="362" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="11">JWT/MTD, supply-chain modules</text>
+    <text x="860" y="384" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="10" font-style="italic">Where ideas prototype before</text>
+    <text x="860" y="398" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="10" font-style="italic">graduating to Crucible</text>
   </g>
 
   <!-- "graduates to" arrow from Apparatus → Crucible -->
   <g opacity="0.7">
     <path d="M 855 280 Q 720 260, 405 285" fill="none" stroke="#22c55e" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrowhead-green)"/>
-    <text x="630" y="252" text-anchor="middle" fill="#22c55e" font-family="system-ui, sans-serif" font-size="10" font-style="italic" opacity="0.85">graduates to</text>
+    <text x="630" y="252" text-anchor="middle" fill="#22c55e" font-family="Recursive, system-ui, sans-serif" font-size="10" font-style="italic" opacity="0.85">graduates to</text>
   </g>
 
   <!-- Synapse observes the production zone (vertical dashed up-arrows) -->
   <g opacity="0.55">
     <line x1="240" y1="232" x2="240" y2="194" stroke="#5a6f8a" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#arrowhead-dim)"/>
     <line x1="640" y1="232" x2="640" y2="194" stroke="#5a6f8a" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#arrowhead-dim)"/>
-    <text x="440" y="216" text-anchor="middle" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="9" letter-spacing="1" font-style="italic">observes traffic</text>
+    <text x="440" y="216" text-anchor="middle" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="9" letter-spacing="1" font-style="italic">observes traffic</text>
   </g>
 
   <!-- "runs on" arrows from production zone DOWN to Bridge -->
   <g opacity="0.55">
     <line x1="240" y1="412" x2="240" y2="450" stroke="#5a6f8a" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#arrowhead-dim)"/>
     <line x1="640" y1="412" x2="640" y2="450" stroke="#5a6f8a" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#arrowhead-dim)"/>
-    <text x="440" y="432" text-anchor="middle" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="9" letter-spacing="1" font-style="italic">runs on</text>
+    <text x="440" y="432" text-anchor="middle" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="9" letter-spacing="1" font-style="italic">runs on</text>
   </g>
 
   <!-- ═══ BOTTOM: BRIDGE (substrate, full width) ═══════════ -->
   <g>
     <rect x="80" y="452" width="1040" height="92" fill="#0d1424" stroke="#1e90ff" stroke-width="1.5" rx="4"/>
-    <text x="100" y="478" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="10" letter-spacing="2" font-weight="500">SUBSTRATE · ORCHESTRATION</text>
-    <text x="100" y="514" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="28" font-weight="600">Bridge</text>
-    <text x="1100" y="492" text-anchor="end" fill="#eef0f4" font-family="system-ui, sans-serif" font-size="13" font-weight="500">Service Orchestrator</text>
-    <text x="1100" y="514" text-anchor="end" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="11">Stands up Crucible, Chimera, custom services in a coordinated graph</text>
-    <text x="1100" y="532" text-anchor="end" fill="#5a6f8a" font-family="system-ui, sans-serif" font-size="11">Single binary · dependencies · health checks · teardown</text>
+    <text x="100" y="478" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="10" letter-spacing="2" font-weight="500">SUBSTRATE · ORCHESTRATION</text>
+    <text x="100" y="514" fill="#FFFFFF" font-family="Recursive, system-ui, sans-serif" font-size="28" font-weight="600">Bridge</text>
+    <text x="1100" y="492" text-anchor="end" fill="#eef0f4" font-family="Recursive, system-ui, sans-serif" font-size="13" font-weight="500">Service Orchestrator</text>
+    <text x="1100" y="514" text-anchor="end" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="11">Stands up Crucible, Chimera, custom services in a coordinated graph</text>
+    <text x="1100" y="532" text-anchor="end" fill="#5a6f8a" font-family="Recursive, system-ui, sans-serif" font-size="11">Single binary · dependencies · health checks · teardown</text>
   </g>
 
   <!-- Footer URL -->
