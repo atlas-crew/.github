@@ -23,12 +23,12 @@ A platform of five open-source products that close the loop on application secur
 - **Chimera** — Vulnerable API targets (480+ endpoints, 25 verticals)
 - **Crucible** — Adversary emulation (120+ scenarios, MITRE-mapped)
 
-**Substrate tier** — platform infrastructure that the trio runs on:
+**Substrate tier** — quieter visual treatment for non-flagship products:
 
-- **Bridge** — Service orchestrator
-- **Apparatus** — Cybersecurity simulation lab
+- **Bridge** — Service orchestrator (stands up and manages the lab)
+- **Apparatus** — Sandbox / experimentation space (where new scenarios prototype before graduating to Crucible)
 
-End-to-end exercise: Apparatus stands up the lab, Bridge orchestrates services, Crucible launches attack scenarios at Chimera's vulnerable surfaces, and Synapse Fleet observes the traffic in real time.
+End-to-end exercise: Bridge stands up and orchestrates the services, Crucible runs production-grade attack scenarios against Chimera's vulnerable surfaces, and Synapse Fleet observes the traffic in real time. Apparatus sits alongside as the sandbox where new scenarios, traffic patterns, and assessment techniques prototype before they're production-ready.
 
 <p align="center">
   <img src="img/atlas-crew-security-architecture.svg" alt="Atlas Crew Security platform architecture: Synapse observes the trio at the top, Crucible exploits Chimera in the middle, Bridge and Apparatus form the substrate at the bottom" width="100%">
@@ -120,7 +120,7 @@ Also available as `nickcrew/chimera` on Docker Hub.
   <img src="img/crucible-banner.png" alt="Crucible — Adversary Emulation" width="100%">
 </p>
 
-The adversary emulation engine. 120+ attack scenarios authored against Chimera's specific vulnerabilities, with a DAG execution engine, live WebSocket simulation, and pass/fail assessment against ground-truth assertions. Every scenario knows what should work, what shouldn't, and where in the target it's exploiting. Point it at Apparatus + Chimera for the full integrated run, or bring your own targets.
+The production-grade adversary emulation engine. 120+ attack scenarios authored against Chimera's specific vulnerabilities, with a DAG execution engine, live WebSocket simulation, and pass/fail assessment against ground-truth assertions. Every scenario knows what should work, what shouldn't, and where in the target it's exploiting. Point it at Chimera (with Bridge orchestrating the services) for the full integrated run, or bring your own targets.
 
 ### Quick Install
 
@@ -155,7 +155,7 @@ Also available as `nickcrew/crucible` on Docker Hub.
   <img src="img/bridge-banner.png" alt="Bridge — Service Orchestrator" width="100%">
 </p>
 
-Single-binary service orchestrator for security labs. Brings up Apparatus, Crucible, Chimera, and any custom services in a coordinated graph; manages dependencies, health checks, and teardown. Substrate-tier — quieter branding than the flagship trio because Bridge is the platform you build security work on, not the security work itself.
+Single-binary service orchestrator for security labs. Stands up Crucible, Chimera, and any custom services in a coordinated graph; manages dependencies, health checks, and teardown. Substrate-tier — quieter branding than the flagship trio because Bridge is the platform you build security work on, not the security work itself.
 
 ### Quick Install
 
@@ -185,7 +185,7 @@ npm install -g @atlascrew/bridge && bridge up
   <img src="img/apparatus-banner.png" alt="Apparatus — Cybersecurity Simulation Lab" width="100%">
 </p>
 
-The cybersecurity simulation lab — the runtime that ties Crucible (attack scenarios) and Chimera (vulnerable targets) together. Provides scenario builder, traffic generation, JWT/MTD modules, supply-chain attack simulation, timeline visualization, and red-team validation. Substrate-tier alongside Bridge.
+The sandbox / experimentation area of the platform. Where new scenarios, traffic generation patterns, and assessment techniques prototype before graduating to Crucible. Provides scenario builder, traffic generation, JWT/MTD modules, supply-chain attack simulation, timeline visualization, and red-team validation — the same primitives Crucible has, in experimental form. Not production-grade like Crucible; it's the lab where ideas live before they're ready to ship. Substrate-tier visually, sibling to Bridge.
 
 ### Quick Install
 
