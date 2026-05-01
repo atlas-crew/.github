@@ -31,7 +31,7 @@ A platform of five open-source products that close the loop on application secur
 End-to-end exercise: Crucible launches production-grade attack scenarios at Chimera's vulnerable endpoints; Synapse WAF sits in the request path as the default defender (or swap it for any WAF — Crucible and Chimera are WAF-agnostic). Bridge orchestrates the services, Synapse Fleet provides multi-tenant observability of WAF activity, and Apparatus sits alongside as the platform-wide R&D space where new ideas prototype before becoming features or new products.
 
 <p align="center">
-  <img src="img/atlas-crew-security-architecture.svg" alt="Atlas Crew Security platform architecture: Synapse observes the trio at the top, Crucible exploits Chimera in the middle, Bridge and Apparatus form the substrate at the bottom" width="100%">
+  <img src="img/atlas-crew-security-architecture.png" alt="Atlas Crew Security platform architecture: Synapse observes the trio at the top, Crucible exploits Chimera in the middle, Bridge and Apparatus form the substrate at the bottom" width="100%">
 </p>
 
 ---
@@ -97,9 +97,9 @@ pip install chimera-api && chimera-api --port 8880 --demo-mode full
 
 ### Packages
 
-| Component   | Install                   | Registry                                       |
-| ----------- | ------------------------- | ---------------------------------------------- |
-| **Chimera** | `pip install chimera-api` | [PyPI](https://pypi.org/project/chimera-api/)  |
+| Component   | Install                   | Registry                                      |
+| ----------- | ------------------------- | --------------------------------------------- |
+| **Chimera** | `pip install chimera-api` | [PyPI](https://pypi.org/project/chimera-api/) |
 
 Also available as `nickcrew/chimera` on Docker Hub.
 
