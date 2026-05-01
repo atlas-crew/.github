@@ -19,7 +19,7 @@ A platform of five open-source products that close the loop on application secur
 
 **Flagship trio** — security tools you'd recommend to peers:
 
-- **Synapse** — Edge defense (WAF + Fleet)
+- **Synapse** — Edge WAF + Fleet observability (the default defender; bring-your-own WAF also supported)
 - **Chimera** — Vulnerable API targets (480+ endpoints, 25 verticals)
 - **Crucible** — Adversary emulation (120+ scenarios, MITRE-mapped)
 
@@ -28,7 +28,7 @@ A platform of five open-source products that close the loop on application secur
 - **Bridge** — Service orchestrator (stands up and manages the lab)
 - **Apparatus** — Innovation pipeline for the entire platform (sandbox where ideas prototype before becoming features in existing products, or entirely new ones)
 
-End-to-end exercise: Bridge stands up and orchestrates the services, Crucible runs production-grade attack scenarios against Chimera's vulnerable surfaces, and Synapse Fleet observes the traffic in real time. Apparatus sits alongside as the platform-wide R&D space — a sandbox where new scenarios, traffic patterns, detection techniques, and tooling prototype before being absorbed into production products or shipped as new ones.
+End-to-end exercise: Crucible launches production-grade attack scenarios at Chimera's vulnerable endpoints; Synapse WAF sits in the request path as the default defender (or swap it for any WAF — Crucible and Chimera are WAF-agnostic). Bridge orchestrates the services, Synapse Fleet provides multi-tenant observability of WAF activity, and Apparatus sits alongside as the platform-wide R&D space where new ideas prototype before becoming features or new products.
 
 <p align="center">
   <img src="img/atlas-crew-security-architecture.svg" alt="Atlas Crew Security platform architecture: Synapse observes the trio at the top, Crucible exploits Chimera in the middle, Bridge and Apparatus form the substrate at the bottom" width="100%">
