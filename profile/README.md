@@ -1,5 +1,5 @@
-<p align="center">
-  <img src="banner.png" alt="Atlas Crew" width="100%">
+/<p align="center">
+  <img src="img/atlas-crew-engineered-to-ship-short-banner.png" alt="Atlas Crew" width="100%">
 </p>
 
 <p align="center">
