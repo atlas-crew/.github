@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>Consulting services & open-source security platforms.</strong><br>
+  <strong>Consulting services & aopen-source security platforms.</strong><br>
   Edge defense, adversary emulation, vulnerable targets, and platform infrastructure.
 </p>
 
