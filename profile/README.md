@@ -247,6 +247,26 @@ cd Facet && docker compose up
 
 ---
 
+## Roadmap & Contributing
+
+Everything above is built in the open. Development is tracked on two public GitHub Project boards:
+
+- **[Atlas Crew Security](https://github.com/orgs/atlas-crew/projects/8)** — the cross-repo roadmap for Synapse, Crucible, Chimera, Bridge, and Apparatus.
+- **[Facet](https://github.com/orgs/atlas-crew/projects/9)** — Facet's standalone roadmap.
+
+Issues are classified by **Type** (Feature · Bug · Task · Chore · Spike) and move through **Backlog → Todo → In Progress → Blocked → Done**. Execution order isn't a column — it's derived from issue dependencies (`blocked-by`) and reconstructed into waves by [`gh-seq`](https://github.com/NickCrew/gh-seq):
+
+```bash
+gh extension install NickCrew/gh-seq
+
+gh seq --project 8 --owner atlas-crew --order-by Priority   # Atlas Crew Security
+gh seq --repo atlas-crew/Facet --order-by Priority          # Facet
+```
+
+To contribute: pick an unblocked issue, comment to claim it, and open a PR against that repo.
+
+---
+
 ## About Atlas Crew
 
 Atlas Crew is the name the work above is published under. Available for SDLC modernization, platform engineering, AI integration, and developer experience work.
