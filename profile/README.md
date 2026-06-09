@@ -1,19 +1,27 @@
-/<p align="center">
-  <img src="img/atlas-crew-engineered-to-ship-short-banner.png" alt="Atlas Crew" width="100%">
-</p>
-
 <p align="center">
-  <strong>Consulting services & aopen-source security platforms.</strong><br>
-  Edge defense, adversary emulation, vulnerable targets, and platform infrastructure.
+  <a href="https://atlascrew.dev target="_blank">
+  <img src="img/atlas-crew-engineered-to-ship-short-banner.png" alt="Atlas Crew" width="100%">
+  </a>
+     <strong>Open-Source Development & Infrastructure Consulting</strong>
 </p>
-
+<p align="center">  
+  <strong>
+🔰 <a href="#atlas-crew-security">Atlas Crew Security</a>  &nbsp;•&nbsp; 💼 <a href="#facet">Facet Career Intel</a>
+   &nbsp;•&nbsp; 🗺️ <a href="#roadmap-and-contributing">Roadmaps</a>
+  </strong>
+<p>
 ---
 
 ## Atlas Crew Security
 
 <p align="center">
   <img src="img/atlas-crew-security-social.png" alt="Atlas Crew Security" width="100%">
+<strong>
+🔰 <a href="#synapse">Synapse</a> &nbsp;<strong>•</strong>&nbsp; 🎯 <a href="#chimera">Chimera</a> &nbsp;•&nbsp; ✅ <a href="#crucible">Crucible</a> &nbsp;•&nbsp; 🎛️ <a href="bridge">Bridge</a> &nbsp;•&nbsp; 🧪 <a href="#apparatus">Apparatus</a>
+</strong>
 </p>
+
+---
 
 A platform of five open-source products that close the loop on application security: detect at the edge, emulate adversaries, harden against real attack surfaces.
 
@@ -247,7 +255,7 @@ cd Facet && docker compose up
 
 ---
 
-## Roadmap & Contributing
+## Roadmap and Contributing
 
 Everything above is built in the open. Development is tracked on two public GitHub Project boards:
 
