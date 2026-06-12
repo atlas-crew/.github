@@ -2,7 +2,7 @@
   <a href="https://atlascrew.dev target="_blank">
   <img src="img/atlas-crew-engineered-to-ship-short-banner.png" alt="Atlas Crew" width="100%">
   </a>
-     <strong>Open-Source Development & Infrastructure Consulting</strong>
+     
 </p>
 <p align="center">  
   <strong>
