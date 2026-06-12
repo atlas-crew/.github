@@ -278,6 +278,4 @@ To contribute: pick an unblocked issue, comment to claim it, and open a PR again
 
 ## About Atlas Crew
 
-Atlas Crew is the name the work above is published under. Available for SDLC modernization, platform engineering, AI integration, and developer experience work.
-
 [**atlascrew.dev/about**](https://atlascrew.dev/about) · [nick@atlascrew.dev](mailto:nick@atlascrew.dev) · [LinkedIn](https://linkedin.com/in/ncferguson)
